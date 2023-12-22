@@ -1,4 +1,4 @@
-import { ADDMOVIE, DELETEMOVIE, HANDLECHANGEMENT, HANDLERATE, RESETFILTER } from "./ActionTypes"
+import { ADDMOVIE, DELETEMOVIE, EDITMOVIE, HANDLECHANGEMENT, HANDLERATE, RESETFILTER } from "./ActionTypes"
 
 const initialState = {
     movies : [
@@ -19,6 +19,7 @@ switch (action.type) {
     case HANDLECHANGEMENT : return {...state, changement : action.payload}
     case HANDLERATE : return {...state, rate : action.payload}
     case RESETFILTER : return {...state, rate : 0, changement :''}
+    case EDITMOVIE : return {...state, movies : state.movies.map((el,i,t)=> el.id == action.payload.id ? {...el,...action.payload} : el)}
     default: return state
 }
 }

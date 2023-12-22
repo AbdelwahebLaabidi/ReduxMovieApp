@@ -4,6 +4,7 @@ import Rating from '@mui/material/Rating';
 import { useDispatch } from 'react-redux';
 import { deleteMovie } from '../Redux/Actions';
 import { useState } from 'react';
+import EditMovie from './EditMovie';
 
 const CardMovie =({el})=>{
 
@@ -21,6 +22,7 @@ const CardMovie =({el})=>{
                 <Rating  value={el.rating} readOnly />
                 <br/>
                 <Button onClick={()=>dispatch(deleteMovie(el.id))} variant= "danger">Delete</Button>
+                <EditMovie el={el}/>
             </Card.Body>
             </Card>
 

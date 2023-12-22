@@ -1,7 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import AddMovie from './Components/AddMovie';
-import FilterMovie from './Components/FilterMovie';
 import ListMovie from './Components/ListMovie';
 import NavMovie from './Components/NavMovie';
 import Home from './Components/Home';

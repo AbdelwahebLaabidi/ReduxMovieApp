@@ -1,4 +1,4 @@
-import { ADDMOVIE, DELETEMOVIE, HANDLECHANGEMENT, HANDLERATE, RESETFILTER } from "./ActionTypes"
+import { ADDMOVIE, DELETEMOVIE, EDITMOVIE, HANDLECHANGEMENT, HANDLERATE, RESETFILTER } from "./ActionTypes"
 
 export const addMovie =(payload)=>{
     return(
@@ -41,6 +41,15 @@ export const resetFilter=()=>{
     return(
         {
             type: RESETFILTER
+        }
+    )
+}
+
+export const editMovie=(payload)=>{
+    return(
+        {
+            type : EDITMOVIE,
+            payload
         }
     )
 }
