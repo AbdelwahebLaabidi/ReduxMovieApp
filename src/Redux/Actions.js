@@ -45,11 +45,3 @@ export const resetFilter=()=>{
     )
 }
 
-export const editMovie=(payload)=>{
-    return(
-        {
-            type : EDITMOVIE,
-            payload
-        }
-    )
-}
